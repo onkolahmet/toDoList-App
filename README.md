@@ -6,11 +6,15 @@
 ## Deployed Version of The App
 http://todoapp-onkolahmet.herokuapp.com .
 
-![todo](https://user-images.githubusercontent.com/62245004/98376024-fafa1580-2053-11eb-9da3-cb7df1d661b4.png)
-
 
 ## How It Works ?
 - User can add custom lists with different names and all the lists will appear on the left side. If user wants to create a list with an existing name, error related to this    problem will appear on the screen.
+
+
+![To Do List - Opera 2020-11-06 17-54-14](https://user-images.githubusercontent.com/62245004/98380603-d5700a80-2059-11eb-821f-a0bb402a108f.gif)
+
+
+
 - User may change the contents of the items from the lists and also can edit the name of the list simultaneously both for the toDoList and Completed Tasks.
 - If the task is done and user clicks to the check box, it will appear on the "Completed Tasks". 
 - Furtherly, user may get that completed task back to the toDoList by clicking the check box again. 
