@@ -1,0 +1,67 @@
+<%- include("partials/header"); -%>
+
+<div class="container">
+  <button type="button" id="sidebarBtn" class="showSidebar mobileOn btn btn-info">
+    <span>L I S T S</span>
+  </button>
+</div>
+
+<div class="container" id="listContainer">
+    <!-- Box for list title and things to do -->
+  <div class="box">
+     <!-- List Title -->
+    <div class="headers">
+     <form action="/editTitle" method="post">
+       <input data-toggle="tooltip" data-placement="bottom" title="Click to edit title" type="text" class="listTitleInput" name="newListTitle" value="<%= showList.name %>" autocomplete="off">
+       <input type="hidden" name="listTitleID" value="<%= showList._id %>">
+       <input type="hidden" name="originalFormattedName" value="<%= showList.formattedName %>">
+     </form>
+    </div>
+    <!-- To Do Items -->
+    <div class="toDoItems item template">
+      <input type="checkbox" class="toDoCheckbox">
+      <input type="text" name="toDoContent" class="toDo" value="" autocomplete="off"/>       
+      <input type="hidden" class="itemID" value=""> 
+      <input type="hidden" class="listID" value="">
+      <button type="button" class="close mobileOn deleteFrom" value="toDo" aria-label="Delete">&times;</button>
+    </div>
+    <% showList.toDo.forEach(function(toDo){ %>
+    <div class="toDoItems item item<%= toDo._id %>">
+            <input type="checkbox" class="toDoCheckbox">
+            <input type="text" name="toDoContent" class="toDo" value="<%= toDo.content %>" autocomplete="off"/>       
+            <input type="hidden" class="itemID" value="<%= toDo._id %>"> 
+            <input type="hidden" class="listID" value="<%= showList._id %>">
+            <button type="button" class="close mobileOn deleteFrom" value="toDo" aria-label="Delete">&times;</button>
+    </div>
+    <% }); %>
+
+    <!-- Add New Item Input -->
+    <div class="toDoItems item addNewItem">
+      <!-- <form action="/addItem" method="post" class="item inputForm"> -->
+        <span class="plus">&#65291</span>
+        <input type="text" class="newItem" autocomplete="off" placeholder="Add new item"/>
+        <input type="hidden" class="listID" value="<%= showList._id %>">
+      <!-- </form> -->
+    </div>
+  </div>
+
+  <!-- Done items -->
+  <div class="box doneBox">
+    <div class="headers">
+        <h4>Completed Tasks</h4>
+    </div>
+    <% showList.done.forEach(function(done){ %>
+    <div class="doneItems item doneItem<%= done._id %>">
+            <input type="checkbox" class="doneCheckbox" checked>
+            <input type="text" class="done" value="<%= done.content %>" autocomplete="off"/>
+            <input type="hidden" class="itemID" value="<%= done._id %>">
+            <input type="hidden" class="listID" value="<%= showList._id %>">
+            <button type="button" class="close mobileOn deleteFrom" value="done" aria-label="Delete">&times;</button>
+    </div>
+    <% }); %>
+    <div class="item space">&nbsp</div> 
+  </div>
+
+</div>
+
+<%- include("partials/footer"); -%>
