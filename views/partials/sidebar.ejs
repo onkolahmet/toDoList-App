@@ -1,0 +1,33 @@
+<nav id="sidebar">
+  <div id="dismiss" class="mobileOn">
+    <i class="fas fa-arrow-left"></i>
+  </div>
+
+  <div class="sidebar-header">
+    <h1>Lists</h1>
+  </div>
+
+  <ul class="list-unstyled components">
+    <!-- <p>Lists</p> -->
+    <% listTitles.forEach(listTitle => { %>
+    <li class="listLink">
+      <a href="/<%= listTitle.formattedName %>" class="titleOfList listTitle<%= listTitle._id %>"><i class="fas fa-list-ul icon"></i><%= listTitle.name %></a>
+      <span class="deleteList mobileOn">&times;</span>
+      <input type="hidden" class="listID" value="<%= listTitle._id %>">
+    </li>
+    <% }); %>
+    <li>
+      <a
+        href="#newListTitleModal"
+        data-toggle="modal"
+        data-target="#newListTitleModal"
+        id="addNewListLink"
+        ><i class="fas fa-plus icon"></i>New List </a
+      >
+    </li>
+  </ul>
+
+  <div class="copyright">
+    Copyright &#169; <%= currentYear %>
+  </div>
+</nav>
