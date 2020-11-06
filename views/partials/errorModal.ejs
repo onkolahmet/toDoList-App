@@ -1,0 +1,15 @@
+<!-- Error -->
+<div class="modal" tabindex="-1" role="dialog" id="errorModal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="errorMsg"><%= errorMsg %></p>
+            </div>
+            <div class="modal-footer">
+                <form action="/redirect" method="post">
+                    <button type="submit" class="btn btn-primary btn-sm" name="btn" value="ok">Ok</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
