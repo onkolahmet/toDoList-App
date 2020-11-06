@@ -10,7 +10,7 @@ http://todoapp-onkolahmet.herokuapp.com .
 ## How It Works ?
 - User can add custom lists with different names and all the lists will appear on the left side. If user wants to create a list with an existing name, error related to this    problem will appear on the screen.
 
-
+ 
 ![To Do List - Opera 2020-11-06 17-54-14](https://user-images.githubusercontent.com/62245004/98380603-d5700a80-2059-11eb-821f-a0bb402a108f.gif)
 
 
