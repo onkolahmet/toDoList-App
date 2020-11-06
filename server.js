@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 
 // Database connect
 const uri = process.env.ATLAS_URI;
-mongoose.connect("mongodb+srv://admin-ahmet:Test123@cluster0.2kiix.mongodb.net/todolistDB", { 
+mongoose.connect("Type your mongoDB URI here.", { 
   useNewUrlParser: true, 
   useUnifiedTopology: true,
   useFindAndModify: false });
