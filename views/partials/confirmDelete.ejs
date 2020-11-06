@@ -1,0 +1,17 @@
+<!-- Confirm Delete -->
+<div class="modal" tabindex="-1" role="dialog" id="confirmDelete">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Are you sure you want to delete the list titled "<span id="titleToDelete"></span>"?</p>
+            </div>
+            <div class="modal-footer">
+                <form action="/deleteList" method="post">
+                    <button type="submit" class="btn btn-primary btn-sm listToDelete modalBtn" name="listToDelete" value="">Yes</button>
+                    <button type="button" class="btn btn-secondary btn-sm modalBtn" data-dismiss="modal">Cancel</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
