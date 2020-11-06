@@ -21,6 +21,8 @@ http://todoapp-onkolahmet.herokuapp.com .
 - With that way, that task will return to the toDoList which it belongs to. 
 - Other than completing the tasks, user can delete the task either from the list itself or from Completed Tasks.
 
+![To Do List - Opera 2020-11-06 17-31-35 (3)](https://user-images.githubusercontent.com/62245004/98385169-bbd1c180-205f-11eb-8be5-107c2154166c.gif)
+
 ## To Use Locally
 1. Clone local branch $ git clone -b local https://github.com/onkolahmet/blog-website.
 2. Run 'npm install' in root folder.
